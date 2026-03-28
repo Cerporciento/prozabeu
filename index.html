@@ -2,46 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Prozabeu LLC | Private Digital Content & Creative Services</title>
-  <meta name="description" content="Prozabeu LLC provides private, structured remote digital content production, creative direction, and workflow support for international online operations." />
-  <meta name="author" content="Prozabeu LLC" />
-  <meta name="robots" content="index, follow" />
-
-  <meta property="og:title" content="Prozabeu LLC | Private Digital Content & Creative Services" />
-  <meta property="og:description" content="Structured remote digital content production and creative services for international online operations." />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_US" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Prozabeu LLC | Private Digital Content & Creative Services" />
-  <meta name="twitter:description" content="Structured remote digital content production and creative services." />
+  <title>Prozabeu LLC | Creative Direction & Video Editing</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet"/>
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'sans-serif']
+            display: ['"Krona One"', 'sans-serif'],
+            sans: ['Rubik', 'sans-serif']
           },
           colors: {
-            obsidian: '#070707',
-            obsidianSoft: '#0f0f10',
-            panel: '#131313',
-            gold: '#c6a66a',
-            goldSoft: '#9d8456',
-            line: '#262626',
-            textSoft: '#b8b8b8',
-            textMuted: '#7d7d7d'
-          },
-          boxShadow: {
-            premium: '0 20px 60px rgba(0,0,0,0.45)'
+            dark: '#1c1c1c',
+            gold: '#f3b351',
+            light: '#f9f9f9',
+            soft: '#5e5e5e'
           }
         }
       }
@@ -49,384 +30,103 @@
   </script>
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background:
-        radial-gradient(circle at top left, rgba(198,166,106,0.10), transparent 24%),
-        radial-gradient(circle at bottom right, rgba(198,166,106,0.06), transparent 26%),
-        linear-gradient(180deg, #070707 0%, #0b0b0c 100%);
-    }
-
-    .gold-gradient-text {
-      background: linear-gradient(135deg, #f3dfb4 0%, #d9bc85 35%, #c6a66a 65%, #8e744a 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .gold-line {
-      width: 84px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, #c6a66a, transparent);
-    }
-
-    .premium-card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
-      border: 1px solid rgba(198,166,106,0.18);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
-      backdrop-filter: blur(10px);
-    }
-
-    .premium-card-soft {
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .nav-link {
-      position: relative;
-    }
-
-    .nav-link::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -8px;
-      width: 0;
-      height: 1px;
-      background: #c6a66a;
-      transition: width .25s ease;
-    }
-
-    .nav-link:hover::after {
-      width: 100%;
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity .8s ease, transform .8s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .hero-border {
-      border: 1px solid rgba(198,166,106,0.18);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-    }
-
-    .button-gold {
-      background: linear-gradient(135deg, #d7ba84, #b79155);
-      color: #0b0b0b;
-    }
-
-    .button-gold:hover {
-      filter: brightness(1.04);
-    }
-
-    .button-outline:hover {
-      border-color: #c6a66a;
-      color: #f3dfb4;
+    body { background:#fff; color:#1c1c1c; }
+    .gold-line { width:72px; height:2px; background:#f3b351; }
+    .outline-card { border:1px solid #ece7dd; background:#fff; }
+    .hero-gradient {
+      background: radial-gradient(circle at top left, rgba(243,179,81,0.15), transparent 30%), #1c1c1c;
     }
   </style>
 </head>
 
-<body class="font-sans text-white antialiased">
+<body class="font-sans">
 
-  <!-- NAV -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-xl border-b border-white/5">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="h-16 flex items-center justify-between">
-        <a href="#" class="text-lg font-semibold tracking-[0.18em] uppercase text-white">
-          <span class="text-gold">Prozabeu</span> LLC
-        </a>
+<!-- HERO -->
+<header class="hero-gradient text-white py-32">
+  <div class="max-w-7xl mx-auto px-6">
+    <h1 class="text-5xl font-display mb-6">
+      Creative Direction & Video Editing
+    </h1>
+    <p class="text-xl max-w-2xl text-gray-300">
+      Remote digital production for brands and creators worldwide.
+    </p>
+  </div>
+</header>
 
-        <div class="hidden md:flex items-center gap-8 text-sm text-textSoft">
-          <a href="#about" class="nav-link hover:text-white transition">About</a>
-          <a href="#services" class="nav-link hover:text-white transition">Services</a>
-          <a href="#operations" class="nav-link hover:text-white transition">Operations</a>
-          <a href="#contact" class="nav-link hover:text-white transition">Contact</a>
+<main>
+
+<!-- PROJECTS -->
+<section class="py-24 bg-[#fbf8f2]">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-display mb-10">
+      50+ Projects Developed
+    </h2>
+  </div>
+</section>
+
+<!-- REAL PROJECTS (NEW SECTION) -->
+<section class="py-24">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <p class="text-sm uppercase tracking-[0.25em] text-soft mb-4">
+      Portfolio
+    </p>
+    <div class="gold-line mb-8"></div>
+
+    <h2 class="text-4xl font-display mb-6">
+      Real projects for brands and creators:
+    </h2>
+
+    <p class="text-lg text-soft mb-12 max-w-3xl">
+      Selected examples of real editing and creative work developed through structured remote workflows.
+    </p>
+
+    <div class="grid lg:grid-cols-2 gap-10">
+
+      <!-- VIDEO 1 -->
+      <div class="outline-card p-4 shadow-lg">
+        <div class="aspect-video">
+          <iframe 
+            class="w-full h-full"
+            src="https://www.youtube.com/embed/DCOgQzttsCk"
+            title="Project Video 1"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
         </div>
       </div>
+
+      <!-- VIDEO 2 -->
+      <div class="outline-card p-4 shadow-lg">
+        <div class="aspect-video">
+          <iframe 
+            class="w-full h-full"
+            src="https://www.youtube.com/embed/k0ZtXNgV-gg"
+            title="Project Video 2"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- HERO -->
-  <header class="min-h-screen flex items-center pt-20">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
-      <div class="grid lg:grid-cols-12 gap-10 items-center">
-        <div class="lg:col-span-7">
-          <p class="text-gold uppercase tracking-[0.30em] text-xs sm:text-sm font-semibold mb-6">
-            Private Firm Style Presentation
-          </p>
+<!-- SERVICES -->
+<section class="py-24 bg-[#fbf8f2]">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-display mb-10">
+      Services
+    </h2>
+  </div>
+</section>
 
-          <div class="gold-line mb-8"></div>
+</main>
 
-          <h1 class="text-5xl sm:text-7xl lg:text-8xl font-semibold leading-[0.95] mb-8">
-            Private Digital
-            <span class="gold-gradient-text block">Content & Creative Services</span>
-          </h1>
-
-          <p class="text-lg sm:text-xl text-textSoft max-w-2xl leading-relaxed mb-10">
-            Prozabeu LLC provides structured remote digital content production,
-            creative direction, editing support, and workflow coordination
-            for international online operations.
-          </p>
-
-          <div class="flex flex-wrap gap-4">
-            <a href="#contact" class="button-gold px-7 py-3 rounded-none text-sm font-semibold tracking-[0.14em] uppercase transition">
-              Contact
-            </a>
-            <a href="#services" class="button-outline px-7 py-3 rounded-none border border-white/15 text-sm font-semibold tracking-[0.14em] uppercase text-white transition">
-              View Services
-            </a>
-          </div>
-        </div>
-
-        <div class="lg:col-span-5">
-          <div class="hero-border p-8 sm:p-10 shadow-premium">
-            <p class="text-xs uppercase tracking-[0.22em] text-textMuted mb-4">Company Profile</p>
-
-            <div class="space-y-7">
-              <div>
-                <p class="text-sm text-textMuted mb-2">Entity</p>
-                <p class="text-2xl font-semibold text-white">Prozabeu LLC</p>
-              </div>
-
-              <div>
-                <p class="text-sm text-textMuted mb-2">Founder</p>
-                <p class="text-lg text-textSoft">Alberto Zafra Bernabeu</p>
-              </div>
-
-              <div>
-                <p class="text-sm text-textMuted mb-2">Business Model</p>
-                <p class="text-lg text-textSoft">Remote digital operations</p>
-              </div>
-
-              <div>
-                <p class="text-sm text-textMuted mb-2">Primary Scope</p>
-                <p class="text-lg text-textSoft">Creative production, content workflows, digital support</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-7xl mx-auto px-6 lg:px-8">
-
-    <!-- ABOUT -->
-    <section id="about" class="py-24 fade-in">
-      <div class="max-w-4xl">
-        <p class="text-gold uppercase tracking-[0.28em] text-xs sm:text-sm font-semibold mb-4">
-          About
-        </p>
-        <div class="gold-line mb-8"></div>
-
-        <h2 class="text-4xl sm:text-5xl font-semibold text-white mb-6">
-          A structured remote business for digital content execution
-        </h2>
-
-        <p class="text-textSoft text-lg leading-relaxed">
-          Prozabeu LLC is a digital services company focused on creative production,
-          digital content direction, video editing, and structured workflow support.
-          The company operates through a fully remote model designed for international online business activity.
-        </p>
-
-        <p class="text-textMuted text-lg leading-relaxed mt-6">
-          Daily operations include content planning, creative coordination,
-          script review, digital asset management, editing workflows,
-          and delivery through cloud-based systems and online communication tools.
-        </p>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="py-24 fade-in">
-      <div class="mb-12">
-        <p class="text-gold uppercase tracking-[0.28em] text-xs sm:text-sm font-semibold mb-4">
-          Services
-        </p>
-        <div class="gold-line mb-8"></div>
-
-        <h2 class="text-4xl sm:text-5xl font-semibold text-white mb-5">
-          Professional digital service lines
-        </h2>
-
-        <p class="text-textSoft max-w-3xl text-lg">
-          Prozabeu LLC provides remote support services built around organized execution,
-          digital content workflows, and creative consistency.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-        <div class="premium-card p-7">
-          <p class="text-gold text-xs uppercase tracking-[0.22em] mb-3">01</p>
-          <h3 class="text-xl font-semibold text-white mb-3">Creative Direction</h3>
-          <p class="text-textSoft text-sm leading-relaxed">
-            Planning and supervising creative execution for digital materials and content pieces.
-          </p>
-        </div>
-
-        <div class="premium-card p-7">
-          <p class="text-gold text-xs uppercase tracking-[0.22em] mb-3">02</p>
-          <h3 class="text-xl font-semibold text-white mb-3">Content Production</h3>
-          <p class="text-textSoft text-sm leading-relaxed">
-            Development of structured digital media assets for international online distribution.
-          </p>
-        </div>
-
-        <div class="premium-card p-7">
-          <p class="text-gold text-xs uppercase tracking-[0.22em] mb-3">03</p>
-          <h3 class="text-xl font-semibold text-white mb-3">Video Editing</h3>
-          <p class="text-textSoft text-sm leading-relaxed">
-            Refinement, editing, sequencing, and preparation of video materials for publishing.
-          </p>
-        </div>
-
-        <div class="premium-card p-7">
-          <p class="text-gold text-xs uppercase tracking-[0.22em] mb-3">04</p>
-          <h3 class="text-xl font-semibold text-white mb-3">Workflow Management</h3>
-          <p class="text-textSoft text-sm leading-relaxed">
-            Coordination of files, project structure, review systems, and delivery processes.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- OPERATIONS -->
-    <section id="operations" class="py-24 fade-in">
-      <div class="grid lg:grid-cols-2 gap-8">
-        <div class="premium-card-soft p-8">
-          <p class="text-gold uppercase tracking-[0.28em] text-xs sm:text-sm font-semibold mb-4">
-            Operations
-          </p>
-          <h2 class="text-3xl sm:text-4xl font-semibold text-white mb-6">
-            Remote-first professional structure
-          </h2>
-
-          <ul class="space-y-3 text-textSoft">
-            <li>• Fully remote business model</li>
-            <li>• International digital operations</li>
-            <li>• Structured online workflow systems</li>
-            <li>• Cloud-based content management</li>
-            <li>• No local physical office activity required</li>
-          </ul>
-        </div>
-
-        <div class="premium-card-soft p-8">
-          <p class="text-gold uppercase tracking-[0.28em] text-xs sm:text-sm font-semibold mb-4">
-            Tools
-          </p>
-          <h2 class="text-3xl sm:text-4xl font-semibold text-white mb-6">
-            Digital systems used in daily work
-          </h2>
-
-          <ul class="space-y-3 text-textSoft">
-            <li>• CapCut and editing tools</li>
-            <li>• Google Drive and digital storage systems</li>
-            <li>• Google Sheets and Excel</li>
-            <li>• Gmail and online communication platforms</li>
-            <li>• Workflow and delivery tools for remote coordination</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="py-24 fade-in">
-      <div class="premium-card p-8 sm:p-10 lg:p-12">
-        <div class="grid lg:grid-cols-2 gap-10">
-          <div>
-            <p class="text-gold uppercase tracking-[0.28em] text-xs sm:text-sm font-semibold mb-4">
-              Contact
-            </p>
-            <div class="gold-line mb-8"></div>
-
-            <h2 class="text-4xl sm:text-5xl font-semibold text-white mb-6">
-              Company information
-            </h2>
-
-            <p class="text-textSoft text-lg leading-relaxed max-w-xl">
-              Prozabeu LLC is a private-facing digital services company focused on remote creative execution,
-              content production support, and structured digital workflow management.
-            </p>
-          </div>
-
-          <div class="space-y-7">
-            <div>
-              <p class="text-sm text-textMuted mb-2">Entity</p>
-              <p class="text-xl text-white font-semibold">Prozabeu LLC</p>
-            </div>
-
-            <div>
-              <p class="text-sm text-textMuted mb-2">Founder</p>
-              <p class="text-textSoft">Alberto Zafra Bernabeu</p>
-            </div>
-
-            <div>
-              <p class="text-sm text-textMuted mb-2">Address</p>
-              <p class="text-textSoft leading-relaxed">
-                5830 E 2nd St, Ste 7000 #33250<br>
-                Casper, Wyoming 82609<br>
-                United States
-              </p>
-            </div>
-
-            <div>
-              <p class="text-sm text-textMuted mb-2">Contact Email</p>
-              <a href="mailto:info@prozabeu.com" class="text-gold hover:text-[#f3dfb4] transition font-medium">
-                info@prozabeu.com
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- DISCLAIMER -->
-    <section class="pb-24 fade-in">
-      <div class="border border-white/8 bg-white/[0.02] p-8">
-        <h3 class="text-lg font-semibold text-white mb-3">Disclaimer</h3>
-        <p class="text-textMuted text-sm leading-relaxed">
-          Prozabeu LLC provides remote digital content production, creative support,
-          editing services, and workflow coordination. The company does not provide
-          financial services, investment advisory services, brokerage services, or custody of funds.
-        </p>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-white/5 py-10">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-      <p class="text-textSoft text-sm tracking-[0.12em] uppercase">
-        © 2026 Prozabeu LLC
-      </p>
-      <p class="text-textMuted text-xs mt-3">
-        5830 E 2nd St, Ste 7000 #33250, Casper, Wyoming 82609, United States
-      </p>
-    </div>
-  </footer>
-
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  </script>
+<footer class="py-10 text-center text-sm text-gray-500">
+  © 2026 Prozabeu LLC
+</footer>
 
 </body>
 </html>
