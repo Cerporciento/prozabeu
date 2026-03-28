@@ -5,9 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Prozabeu LLC | Creative Direction & Video Editing</title>
+  <meta name="description" content="Prozabeu LLC provides remote creative direction, digital content production, video editing, and structured online workflow support for international digital campaigns." />
+  <meta name="author" content="Prozabeu LLC" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Prozabeu LLC | Creative Direction & Video Editing" />
+  <meta property="og:description" content="Remote creative production, video editing, and structured content workflows for international digital campaigns." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prozabeu LLC | Creative Direction & Video Editing" />
+  <meta name="twitter:description" content="Remote creative production, video editing, and structured digital workflow support." />
 
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet"/>
 
   <script>
@@ -22,7 +35,8 @@
             dark: '#1c1c1c',
             gold: '#f3b351',
             light: '#f9f9f9',
-            soft: '#5e5e5e'
+            soft: '#5e5e5e',
+            borderc: '#e9e0d2'
           }
         }
       }
@@ -30,103 +44,391 @@
   </script>
 
   <style>
-    body { background:#fff; color:#1c1c1c; }
-    .gold-line { width:72px; height:2px; background:#f3b351; }
-    .outline-card { border:1px solid #ece7dd; background:#fff; }
+    html { scroll-behavior: smooth; }
+    body { background: #ffffff; color: #1c1c1c; }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .gold-line { width: 72px; height: 2px; background: #f3b351; }
+    .outline-card { border: 1px solid #ece7dd; background: #ffffff; }
     .hero-gradient {
-      background: radial-gradient(circle at top left, rgba(243,179,81,0.15), transparent 30%), #1c1c1c;
+      background: radial-gradient(circle at top left, rgba(243,179,81,0.18), transparent 30%), linear-gradient(180deg, #1c1c1c 0%, #232323 100%);
     }
+    .soft-block { background: #faf8f4; border: 1px solid #efe7da; }
   </style>
 </head>
 
-<body class="font-sans">
+<body class="font-sans antialiased">
 
-<!-- HERO -->
-<header class="hero-gradient text-white py-32">
-  <div class="max-w-7xl mx-auto px-6">
-    <h1 class="text-5xl font-display mb-6">
-      Creative Direction & Video Editing
-    </h1>
-    <p class="text-xl max-w-2xl text-gray-300">
-      Remote digital production for brands and creators worldwide.
-    </p>
-  </div>
-</header>
-
-<main>
-
-<!-- PROJECTS -->
-<section class="py-24 bg-[#fbf8f2]">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-4xl font-display mb-10">
-      50+ Projects Developed
-    </h2>
-  </div>
-</section>
-
-<!-- REAL PROJECTS (NEW SECTION) -->
-<section class="py-24">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <p class="text-sm uppercase tracking-[0.25em] text-soft mb-4">
-      Portfolio
-    </p>
-    <div class="gold-line mb-8"></div>
-
-    <h2 class="text-4xl font-display mb-6">
-      Real projects for brands and creators:
-    </h2>
-
-    <p class="text-lg text-soft mb-12 max-w-3xl">
-      Selected examples of real editing and creative work developed through structured remote workflows.
-    </p>
-
-    <div class="grid lg:grid-cols-2 gap-10">
-
-      <!-- VIDEO 1 -->
-      <div class="outline-card p-4 shadow-lg">
-        <div class="aspect-video">
-          <iframe 
-            class="w-full h-full"
-            src="https://www.youtube.com/embed/DCOgQzttsCk"
-            title="Project Video 1"
-            frameborder="0"
-            allowfullscreen>
-          </iframe>
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[#f0ece5]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="h-16 flex items-center justify-between">
+        <a href="#" class="text-sm sm:text-base font-medium tracking-[0.14em] uppercase text-dark">
+          Prozabeu LLC
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm text-soft">
+          <a href="#about" class="hover:text-dark transition">About</a>
+          <a href="#projects" class="hover:text-dark transition">Projects</a>
+          <a href="#services" class="hover:text-dark transition">Services</a>
+          <a href="#workflow" class="hover:text-dark transition">Workflow</a>
+          <a href="#contact" class="hover:text-dark transition">Contact</a>
         </div>
       </div>
-
-      <!-- VIDEO 2 -->
-      <div class="outline-card p-4 shadow-lg">
-        <div class="aspect-video">
-          <iframe 
-            class="w-full h-full"
-            src="https://www.youtube.com/embed/k0ZtXNgV-gg"
-            title="Project Video 2"
-            frameborder="0"
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- SERVICES -->
-<section class="py-24 bg-[#fbf8f2]">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-4xl font-display mb-10">
-      Services
-    </h2>
-  </div>
-</section>
+  <!-- HERO -->
+  <header class="hero-gradient min-h-screen flex items-center pt-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
 
-</main>
+        <div class="lg:col-span-7 text-light">
+          <p class="text-gold uppercase tracking-[0.25em] text-sm font-medium mb-6">
+            Remote Creative Production
+          </p>
 
-<footer class="py-10 text-center text-sm text-gray-500">
-  © 2026 Prozabeu LLC
-</footer>
+          <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl leading-[1.1] mb-8">
+            Hi, I’m <span class="text-gold">Alberto</span><br>
+            creative director &<br>
+            digital editor
+          </h1>
 
+          <p class="text-lg sm:text-xl text-[#d8d8d8] max-w-2xl leading-relaxed mb-10">
+            Through Prozabeu LLC, I manage structured remote work focused on creative direction, digital content production, video editing, and workflow support for international online campaigns.
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="#contact" class="bg-gold text-dark px-7 py-3 font-medium uppercase tracking-[0.12em] text-sm hover:brightness-105 transition">
+              Contact
+            </a>
+            <a href="#projects" class="border border-white/20 text-white px-7 py-3 font-medium uppercase tracking-[0.12em] text-sm hover:border-gold hover:text-gold transition">
+              View Experience
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="bg-white p-8 sm:p-10 shadow-2xl">
+            <p class="text-xs uppercase tracking-[0.22em] text-soft mb-4">Professional Profile</p>
+            <div class="space-y-6">
+              <div>
+                <p class="text-sm text-soft mb-1">Entity</p>
+                <p class="text-xl font-medium text-dark">Prozabeu LLC</p>
+              </div>
+              <div>
+                <p class="text-sm text-soft mb-1">Founder</p>
+                <p class="text-dark">Alberto Zafra Bernabeu</p>
+              </div>
+              <div>
+                <p class="text-sm text-soft mb-1">Primary Focus</p>
+                <p class="text-dark">Creative direction, digital content production, video editing</p>
+              </div>
+              <div>
+                <p class="text-sm text-soft mb-1">Work Model</p>
+                <p class="text-dark">Fully remote, digital, and location-independent</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 fade-in">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8">
+        <p class="text-sm uppercase tracking-[0.25em] text-soft mb-4">About</p>
+        <div class="gold-line mb-8"></div>
+
+        <h2 class="font-display text-3xl sm:text-5xl leading-[1.25] mb-8">
+          Structured digital work for modern online campaigns
+        </h2>
+
+        <p class="text-lg text-soft leading-relaxed max-w-4xl">
+          Prozabeu LLC is the professional structure through which Alberto Zafra Bernabeu carries out remote digital work focused on creative production and digital content direction. The work includes planning and directing digital campaigns, producing online content, coordinating creative workflows, supporting visual storytelling, refining final assets, and collaborating through online systems.
+        </p>
+
+        <p class="text-lg text-soft leading-relaxed max-w-4xl mt-6">
+          All activities are performed fully online, without on-site work or physical client interaction, using a location-independent model for international operations.
+        </p>
+      </div>
+    </section>
+
+    <!-- 50+ PROJECTS -->
+    <section id="projects" class="py-24 bg-[#fbf8f2] fade-in">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-10 items-start">
+          <div class="lg:col-span-5">
+            <p class="text-sm uppercase tracking-[0.25em] text-soft mb-4">Experience</p>
+            <div class="gold-line mb-8"></div>
+
+            <h2 class="font-display text-3xl sm:text-5xl leading-[1.25] mb-8">
+              50+ projects<br>
+              developed with a<br>
+              structured workflow
+            </h2>
+
+            <p class="text-lg text-soft leading-relaxed">
+              From content planning to final publishing delivery, the work is organized through repeatable digital systems that support creative consistency, editing quality, and efficient execution.
+            </p>
+          </div>
+
+          <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6">
+            <div class="outline-card p-8">
+              <p class="text-5xl font-display text-gold mb-4">50+</p>
+              <h3 class="font-medium text-xl mb-3">Completed Projects</h3>
+              <p class="text-soft leading-relaxed">
+                Creative production and editing work delivered through organized online processes.
+              </p>
+            </div>
+
+            <div class="outline-card p-8">
+              <p class="text-5xl font-display text-gold mb-4">100%</p>
+              <h3 class="font-medium text-xl mb-3">Remote Execution</h3>
+              <p class="text-soft leading-relaxed">
+                All professional activity is carried out digitally through remote tools and cloud systems.
+              </p>
+            </div>
+
+            <div class="outline-card p-8">
+              <p class="text-5xl font-display text-gold mb-4">6</p>
+              <h3 class="font-medium text-xl mb-3">Core Workflow Stages</h3>
+              <p class="text-soft leading-relaxed">
+                Planning, organization, scripting, editing, optimization, and final delivery.
+              </p>
+            </div>
+
+            <div class="outline-card p-8">
+              <p class="text-5xl font-display text-gold mb-4">24/7</p>
+              <h3 class="font-medium text-xl mb-3">Digital Availability</h3>
+              <p class="text-soft leading-relaxed">
+                Operations supported through cloud-based files, communication, and structured coordination.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REAL PROJECTS VIDEOS -->
+    <section class="py-24 fade-in">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <p class="text-sm uppercase tracking-[0.25em] text-soft mb-4">Portfolio</p>
+        <div class="gold-line mb-8"></div>
+
+        <h2 class="font-display text-3xl sm:text-5xl leading-[1.25] mb-12">
+          Real projects for brands and creators:
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="outline-card p-4">
+            <div class="relative w-full overflow-hidden" style="padding-top: 56.25%;">
+              <iframe
+                class="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/DCOgQzttsCk"
+                title="Real project video 1"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <div class="outline-card p-4">
+            <div class="relative w-full overflow-hidden" style="padding-top: 56.25%;">
+              <iframe
+                class="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/k0ZtXNgV-gg"
+                title="Real project video 2"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-24 fade-in">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <p class="text-sm uppercase tracking-[0.25em] text-soft mb-4">Services</p>
+        <div class="gold-line mb-8"></div>
+
+        <h2 class="font-display text-3xl sm:text-5xl leading-[1.25] mb-12">
+          Professional service areas
+        </h2>
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+          <div class="soft-block p-8">
+            <h3 class="font-medium text-xl mb-4">Creative Direction</h3>
+            <p class="text-soft leading-relaxed">
+              Planning and directing digital campaigns and creative execution for online distribution.
+            </p>
+          </div>
+
+          <div class="soft-block p-8">
+            <h3 class="font-medium text-xl mb-4">Content Production</h3>
+            <p class="text-soft leading-relaxed">
+              Producing digital content assets and supporting visual storytelling across platforms.
+            </p>
+          </div>
+
+          <div class="soft-block p-8">
+            <h3 class="font-medium text-xl mb-4">Video Editing</h3>
+            <p class="text-soft leading-relaxed">
+              Editing footage, refining structure, applying transitions, overlays, and narrative flow.
+            </p>
+          </div>
+
+          <div class="soft-block p-8">
+            <h3 class="font-medium text-xl mb-4">Workflow Support</h3>
+            <p class="text-soft leading-relaxed">
+              Coordinating files, scripts, schedules, publishing delivery, and remote communication.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKFLOW -->
+    <section id="workflow" class="py-24 bg-dark text-light fade-in">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <p class="text-sm uppercase tracking-[0.25em] text-gold mb-4">Workflow</p>
+        <div class="gold-line mb-8"></div>
+
+        <h2 class="font-display text-3xl sm:text-5xl leading-[1.25] mb-12">
+          Daily professional activity
+        </h2>
+
+        <div class="grid lg:grid-cols-2 gap-6">
+          <div class="border border-white/10 p-8">
+            <h3 class="font-medium text-2xl mb-4 text-gold">Content Planning & Tracking</h3>
+            <p class="text-[#d0d0d0] leading-relaxed">
+              Reviewing campaign goals, planning concepts, outlining production, and tracking publication status through structured content calendars.
+            </p>
+          </div>
+
+          <div class="border border-white/10 p-8">
+            <h3 class="font-medium text-2xl mb-4 text-gold">Drive File Management</h3>
+            <p class="text-[#d0d0d0] leading-relaxed">
+              Organizing folders, scripts, raw materials, and video assets in shared cloud workspaces.
+            </p>
+          </div>
+
+          <div class="border border-white/10 p-8">
+            <h3 class="font-medium text-2xl mb-4 text-gold">Script Writing & Review</h3>
+            <p class="text-[#d0d0d0] leading-relaxed">
+              Writing, editing, and refining scripts to keep the message clear, structured, and aligned with communication goals.
+            </p>
+          </div>
+
+          <div class="border border-white/10 p-8">
+            <h3 class="font-medium text-2xl mb-4 text-gold">Video Editing & Optimization</h3>
+            <p class="text-[#d0d0d0] leading-relaxed">
+              Editing footage, applying cuts, transitions, overlays, templates, and audio synchronization for high-impact final pieces.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-10 border border-white/10 p-8">
+          <h3 class="font-medium text-2xl mb-4 text-gold">Upload & Delivery</h3>
+          <p class="text-[#d0d0d0] leading-relaxed max-w-4xl">
+            Final files are uploaded to cloud systems for publication and delivery, maintaining a fully digital, remote, and location-independent workflow.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section class="py-24 fade-in">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <p class="text-sm uppercase tracking-[0.25em] text-soft mb-4">Tools</p>
+        <div class="gold-line mb-8"></div>
+
+        <h2 class="font-display text-3xl sm:text-5xl leading-[1.25] mb-12">
+          Digital systems used in daily work
+        </h2>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div class="outline-card p-6"><p class="font-medium">CapCut</p></div>
+          <div class="outline-card p-6"><p class="font-medium">Google Sheets</p></div>
+          <div class="outline-card p-6"><p class="font-medium">Excel</p></div>
+          <div class="outline-card p-6"><p class="font-medium">Drive</p></div>
+          <div class="outline-card p-6"><p class="font-medium">Gmail / WhatsApp / Telegram / Google Meeting</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 bg-[#fbf8f2] fade-in">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <p class="text-sm uppercase tracking-[0.25em] text-soft mb-4">Contact</p>
+        <div class="gold-line mb-8"></div>
+
+        <h2 class="font-display text-3xl sm:text-5xl leading-[1.25] mb-12">
+          Company information
+        </h2>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+          <div class="outline-card p-8">
+            <p class="text-sm text-soft mb-2">Entity</p>
+            <p class="text-xl font-medium mb-6">Prozabeu LLC</p>
+
+            <p class="text-sm text-soft mb-2">Founder</p>
+            <p class="mb-6">Alberto Zafra Bernabeu</p>
+
+            <p class="text-sm text-soft mb-2">Address</p>
+            <p class="leading-relaxed">
+              5830 E 2nd St, Ste 7000 #33250<br>
+              Casper, Wyoming 82609<br>
+              United States
+            </p>
+          </div>
+
+          <div class="outline-card p-8">
+            <p class="text-sm text-soft mb-2">Business model</p>
+            <p class="leading-relaxed text-soft mb-6">
+              Independent remote digital business focused on creative direction, content production, video editing, and cloud-based workflow support for international clients.
+            </p>
+
+            <p class="text-sm text-soft mb-2">Contact email</p>
+            <a href="mailto:info@prozabeu.com" class="text-dark font-medium hover:text-gold transition">
+              info@prozabeu.com
+            </a>
+
+            <p class="text-sm text-soft mt-6 mb-2">Availability</p>
+            <p class="text-soft">Remote operations • International workflow • Digital delivery</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-10 border-t border-[#efeadf]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <p class="text-sm text-soft">© 2026 Prozabeu LLC</p>
+      <p class="text-xs text-[#999] mt-2">
+        5830 E 2nd St, Ste 7000 #33250, Casper, Wyoming 82609, United States
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
